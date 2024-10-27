@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Veículos</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+       
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        
+        th {
+            background-color: #4a4a4a;
+            color: #fff;
+        }
+
+        
+        .action-button {
+            color: #fff;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-right: 5px;
+            font-size: 14px;
+        }
+
+        .edit-button {
+            background-color: #007bff;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Veículos</h1>
+    <form id="form-veiculos">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" required>
+        
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" required>
+        
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" required>
+        
+        <label for="valor">Valor (R$):</label>
+        <input type="number" id="valor" required>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+    
+    <table id="tabela-veiculos">
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Valor (R$)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Os veículos serão listados aqui dinamicamente pelo JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="cadastro-veiculos.js"></script>
+</body>
+</html>
+

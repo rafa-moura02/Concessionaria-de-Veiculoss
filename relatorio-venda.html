@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venda</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        label, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #4a4a4a;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registrar Venda</h1>
+    <form id="form-venda">
+        <label for="cliente-select">Cliente:</label>
+        <select id="cliente-select" required>
+            <!-- Opções de clientes serão carregadas dinamicamente -->
+        </select>
+
+        <label for="veiculo-select">Veículo:</label>
+        <select id="veiculo-select" required>
+            <!-- Opções de veículos serão carregadas dinamicamente -->
+        </select>
+        
+        <button type="submit">Registrar Venda</button>
+    </form>
+
+    <h2>Vendas Realizadas</h2>
+    <table id="tabela-vendas">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Veículo</th>
+                <th>Ano</th>
+                <th>Valor (R$)</th>
+                <th>Data da Venda</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- As vendas serão listadas aqui dinamicamente pelo JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="relatorio-venda.js"></script>
+</body>
+</html>

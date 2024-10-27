@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-    
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Concessionária de Veículo 
-    </title>
+    <title>Concessionária de Veículos</title>
     
     <style>
-        
         body {
             font-style: italic, sans-serif;
             margin: 0;
@@ -20,14 +13,15 @@
         }
 
         header {
-            background-color: #e1bd0a;
-            color: #1d1c1e;
-            padding: 10px 0;
+            background-color: #070807;
+            background-size: cover;
+            color: #e1bd0a;                
             text-align: center;
+            padding: 30px;
         }
 
         header nav a {
-            color: rgb(6, 0, 0);
+            color: rgb(244, 240, 240);
             text-decoration: none;
             margin: 0 15px;
         }
@@ -40,17 +34,14 @@
             text-align: center;
             margin-top: 20px;
             padding: 10px;
-            background-color: #333;
+            background-color: #2f2e2e;
             color: #ffffff;
-        }
-
-        form {
-            margin-bottom: 20px;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
 
         table, th, td {
@@ -60,6 +51,10 @@
         th, td {
             padding: 10px;
             text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
         }
 
         button {
@@ -73,40 +68,47 @@
         nav {
             margin-bottom: 20px;
         }
-
     </style>
 </head>
 <body>
     <header>
         <div class="camaro">
-            <img src="https://img.freepik.com/vetores-premium/ilustracao-da-silhueta-do-carro-de-um-ford-mustang_507315-178.jpg?w=1380" 
-            width="150" height="150" />
-            </div>
-            <h1>Miguelitos Auto Import </h1>
-            
-            <nav>
-                <a href="cadastro-veiculos.html">Cadastro de Veículos</a>
-                <a href="cadastro-clientes.html">Cadastro de Clientes</a>
-                <a href="login.html">Acesso Administrativo</a>
-            </nav>
-        </header>
-        <section>
-            <h2>Nossa Garagem</h2>
-            <div class="camaro">
-                <img src="https://bocamafrapremium.com.br/wp-content/uploads/2024/08/9a88abe84e0945ea9462077139ca0d5c_1680611985877.jpeg" 
-                width="200" height="150" /> 
-                BMW 320I Cinza Creme 
-
-            </div>
-            <div class="camaro">
-                <img src="https://bocamafrapremium.com.br/wp-content/uploads/2024/10/f6cc1c030a3d4deab451df496f239a11_1722599979453.jpg"
-                width="200" height="150" />
-                Ferrari - F8 Tributo 3.9 V8 - 2021
-                    
-            </div>
-        </section>
-        <footer>
-            <p>© 2024 Miguelitos Auto import</p>
-        </footer>
-    </body>
-    </html>
+            <img src="https://files.oaiusercontent.com/file-Oq0TygAEWQyZIuX3uua0DohF?se=2024-10-27T21%3A12%3A56Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D778a0045-47ba-4247-b4a5-e50f5ef69a34.webp&sig=LDqq3R3zwE%2BZ11HxroBzWVMR%2BWIhvLwLpnS03jvfcy8%3D" 
+            width="100" height="100" />
+        </div>
+        <h1>Miguelitos Auto Import</h1>
+        
+        <nav>
+            <a href="cadastro-veiculos.html">Cadastro de Veículos</a>
+            <a href="cadastro-clientes.html">Cadastro de Clientes</a>
+            <a href="relatorio-venda.html">Relatorio de Vendas</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h2>Listagem de Carros</h2>
+        
+        <!-- Tabela para listar os veículos cadastrados -->
+        <table id="tabela-veiculos">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Valor (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Os veículos serão listados aqui dinamicamente pelo JavaScript -->
+            </tbody>
+        </table>
+    </section>
+    
+    <footer>
+        <p>© 2024 Miguelitos Auto Import</p>
+    </footer>
+    
+    <!-- Incluindo o arquivo de script externo -->
+    <script src="script.js"></script>
+</body>
+</html>
