@@ -1,9 +1,8 @@
-// Carregar e renderizar os veículos salvos no LocalStorage ao iniciar a página
+
 document.addEventListener('DOMContentLoaded', renderTable);
 
-// Captura o evento de submissão do formulário e salva os dados no LocalStorage
 document.getElementById('form-veiculos').addEventListener('submit', function(e) {
-    e.preventDefault(); // Previne o envio padrão do formulário
+    e.preventDefault(); 
 
     const marca = document.getElementById('marca').value;
     const modelo = document.getElementById('modelo').value;
