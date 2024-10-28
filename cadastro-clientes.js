@@ -1,7 +1,7 @@
-// Carregar e renderizar os clientes ao iniciar a página
+
 document.addEventListener('DOMContentLoaded', renderClientes);
 
-// Captura o evento de submissão do formulário e salva os dados do cliente no LocalStorage
+
 document.getElementById('form-clientes').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -19,11 +19,10 @@ document.getElementById('form-clientes').addEventListener('submit', function(e) 
     renderClientes();
 });
 
-// Função para renderizar a tabela de clientes
 function renderClientes() {
     const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
     const tbody = document.querySelector("#tabela-clientes tbody");
-    tbody.innerHTML = ''; // Limpa o conteúdo atual da tabela
+    tbody.innerHTML = '';
 
     clientes.forEach((cliente, index) => {
         const row = document.createElement('tr');
@@ -40,7 +39,6 @@ function renderClientes() {
     });
 }
 
-// Função para editar cliente (exemplo)
 function editCliente(index) {
     const clientes = JSON.parse(localStorage.getItem('clientes'));
     const cliente = clientes[index];
