@@ -67,11 +67,10 @@ function editCliente(index) {
     document.getElementById('form-clientes').replaceChild(saveButton, cadastrarButton);
 }
 
-// Função para excluir cliente
 function deleteCliente(index) {
     let clientes = JSON.parse(localStorage.getItem('clientes'));
-    clientes.splice(index, 1); // Remove o cliente do array
+    clientes.splice(index, 1);
 
-    localStorage.setItem('clientes', JSON.stringify(clientes)); // Atualiza o LocalStorage
-    renderClientes(); // Atualiza a tabela de clientes
+    localStorage.setItem('clientes', JSON.stringify(clientes));
+    renderClientes(); 
 }
