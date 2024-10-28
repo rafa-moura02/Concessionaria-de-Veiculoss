@@ -1,15 +1,15 @@
-// Carregar clientes, veículos e vendas ao iniciar a página
+
 document.addEventListener('DOMContentLoaded', function() {
     carregarOpcoesClientes();
     carregarOpcoesVeiculos();
     renderVendas();
 });
 
-// Função para carregar opções de clientes no seletor de vendas
+
 function carregarOpcoesClientes() {
     const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
     const clienteSelect = document.getElementById('cliente-select');
-    clienteSelect.innerHTML = ''; // Limpa opções anteriores
+    clienteSelect.innerHTML = ''; 
 
     clientes.forEach((cliente, index) => {
         const option = document.createElement('option');
@@ -19,11 +19,11 @@ function carregarOpcoesClientes() {
     });
 }
 
-// Função para carregar opções de veículos no seletor de vendas
+
 function carregarOpcoesVeiculos() {
     const veiculos = JSON.parse(localStorage.getItem('veiculos')) || [];
     const veiculoSelect = document.getElementById('veiculo-select');
-    veiculoSelect.innerHTML = ''; // Limpa opções anteriores
+    veiculoSelect.innerHTML = ''; 
 
     veiculos.forEach((veiculo, index) => {
         const option = document.createElement('option');
@@ -33,7 +33,6 @@ function carregarOpcoesVeiculos() {
     });
 }
 
-// Registrar a venda ao enviar o formulário de vendas
 document.getElementById('form-venda').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -58,11 +57,10 @@ document.getElementById('form-venda').addEventListener('submit', function(e) {
     alert('Venda registrada com sucesso!');
 });
 
-// Função para renderizar a tabela de vendas
 function renderVendas() {
     const vendas = JSON.parse(localStorage.getItem('vendas')) || [];
     const tbody = document.querySelector("#tabela-vendas tbody");
-    tbody.innerHTML = ''; // Limpa o conteúdo atual da tabela
+    tbody.innerHTML = '';
 
     vendas.forEach(venda => {
         const row = document.createElement('tr');
